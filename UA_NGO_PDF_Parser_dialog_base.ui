@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NgoPdfParserDialogBase</class>
+ <widget class="QDialog" name="NgoPdfParserDialogBase">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>648</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UA_NGO_PDF_Parser</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>641</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Головне меню</string>
+    </attribute>
+    <widget class="QDialogButtonBox" name="button_box">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>380</y>
+       <width>201</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+    <widget class="QgsFileWidget" name="pdf_folder_path">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>300</y>
+       <width>361</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="storageMode">
+      <enum>QgsFileWidget::GetDirectory</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>310</y>
+       <width>251</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Шлях до папки з pdf витягами</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>621</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Плагін працює з pdf файлами витягів НГО отриманих через е-сервіси ДЗК&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;В результаті обробки створюється таблиця з відподними відомостями, що можна отримати з витягу.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Для роботи потрібно:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;1. Вказати шлях до папки з витягами у форматі .pdf &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;2. Вказати шлях до папки в яку бажаєте зберегти таблицю з результатами у форматі .xlsx&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;3. Запустити процес обробки та чекати завершення процесу!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Сподіваюся цей інструмент стане Вам в нагоді.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Дякую всім, хто використовує цей плагін!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QgsFileWidget" name="excel_table_path">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>361</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="filter">
+      <string/>
+     </property>
+     <property name="storageMode">
+      <enum>QgsFileWidget::SaveFile</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>350</y>
+       <width>251</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Шлях для збереження таблиці</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="is_add_layer_checkBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>411</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Додати таблицю з результатами як шар?</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Повідомлення ДЗК про індексацію НГО</string>
+    </attribute>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>611</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Державна служба України з питань геодезії, картографії та кадастру на виконання статті 289 Податкового кодексу України повідомляє. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;За інформацією Державної служби статистики України, індекс споживчих цін за 2023 рік становить &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;105,1%&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Значення коефіцієнта індексації нормативної грошової оцінки земель за 2023 рік становить &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,051&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Коефіцієнт індексації нормативної грошової оцінки земель застосовується кумулятивно залежно від дати проведення нормативної грошової оцінки земель (пункт 289.2 статті 289 Податкового кодексу України). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Коефіцієнт індексації нормативної грошової оцінки земель у розрізі років становить: 1996 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,703&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 1997 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,059&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 1998 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,006&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 1999 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,127&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2000 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,182&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2001 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,02&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2005 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,035&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2007 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,028&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2008 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,152&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2009 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,059&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2010 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2011 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2012 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2013 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2014 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,249&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2015 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,433&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (крім сільськогосподарських угідь) і&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt; 1,2&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для сільськогосподарських угідь (рілля, багаторічні насадження, сіножаті, пасовища та перелоги); 2016 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для сільськогосподарських угідь (рілля, багаторічні насадження, сіножаті, пасовища та перелоги) та &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,06&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для земель несільськогосподарського призначення); 2017 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2018 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2019 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2020 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;; 2021 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для сільськогосподарських угідь (рілля, багаторічні насадження, сіножаті, пасовища та перелоги) та &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,1&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для земель несільськогосподарського призначення); 2022 рік – &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,0&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для сільськогосподарських угідь (рілля, багаторічні насадження, сіножаті, пасовища та перелоги) та &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;1,15&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (для земель і земельних ділянок (крім сільськогосподарських угідь). &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Індексація нормативної грошової оцінки земель за 2002, 2003, 2004 та 2006 роки не здійснювалася. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Крім того, повідомляємо, що витяги, які були сформовані автоматично програмним забезпеченням Державного земельного кадастру в період з&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;01 січня до 15 січня 2024 року, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;не містять коефіцієнтів індексації за 2023 рік&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, відповідно, значення нормативної грошової оцінки земельних ділянок, зазначене в цих витягах, потребує перерахунку із застосуванням коефіцієнта індексації за 2023 рік.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Джерело:&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;https://land.gov.ua/derzhgeokadastr-povidomlyaye-pro-indeksacziyu-normatyvnoyi-groshovoyi-oczinky-zemel-za-2023-rik/&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsFileWidget</class>
+   <extends>QWidget</extends>
+   <header>qgsfilewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>NgoPdfParserDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>NgoPdfParserDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

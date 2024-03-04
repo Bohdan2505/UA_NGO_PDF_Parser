@@ -1,0 +1,3 @@
+pdfminer.six pdfminer
+openpyxl openpyxl
+pandas pandas

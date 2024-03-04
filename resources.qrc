@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/UA_NGO_PDF_Parser" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
